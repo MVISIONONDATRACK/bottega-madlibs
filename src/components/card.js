@@ -3,32 +3,15 @@ import React, { Component } from 'react';
 import Input from './input';
 import Content from './content';
 
+const INITIAL_STATE = {}
+
 class Card extends Component {
     
     constructor() {
         super()
 
-        this.state = {
-            color: '',
-            PluralNoun: '',
-            adjectiveOne: '',
-            celebOne: '',
-            adjectiveTwo: '',
-            nounOne: '',
-            numberOne: '',
-            numberTwo: '',
-            nounTwo: '',
-            adjectiveThree: '',
-            celebTwo: '',
-            celebThree: '',
-            adjectiveFour: '',
-            nounThree: '',
-            celebFour: '',
-            adjectiveFive: '',
-            contentVisible: false
+        this.state = INITIAL_STATE;
         
-        }
-    
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -40,9 +23,14 @@ class Card extends Component {
 
     handleFormSubmit(event){
         event.preventDefault()
-        this.setState({ contentVisible: !this.state.contentVisible })
-    }
 
+        if(this.state.contentVisible) {
+            this.setState(INITIAL_STATE)
+        } else {
+            this.setState({ contentVisible: true })
+        }
+    }
+    
     render() {
         
         const inputData = [
