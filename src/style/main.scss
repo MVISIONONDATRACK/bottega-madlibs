@@ -34,8 +34,7 @@
         position: absolute;
         height: 110vh;
         width: 100vw;
-        background-color: #444444;
-        
+        background-color: #00CB79;
     }
     
     h1 {
@@ -78,13 +77,21 @@
     // grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
     height:40px; 
+    
     &__title {
-    grid-column: input-s/input-e;
+        grid-column: input-s/input-e;
     }
     input {
-    grid-column: input-s/input-e;
+        grid-column: input-s/input-e;
     }
     &__number {
-    grid-column: number-s/number-e;
+        grid-column: number-s/number-e;
+    
+        background-color: #00CB79;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px;
+        padding-top: 34px;
     }
-    }
+}    
