@@ -1,3 +1,11 @@
+.gray {
+    background: #B3B3B3;
+}
+
+.green {
+    background: #00CB79;
+}
+
 .home {
     position: relative;
     
@@ -161,5 +169,12 @@
         border-radius: 50%
     }
 }    
+}
+
+.main__content__label {
+    height: 18px;
+    width: 18px; 
+    background-color: black;
+    border-radius: 50%;
 }
 
